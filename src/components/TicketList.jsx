@@ -19,17 +19,22 @@ var masterTicketList = [
   }
 ];
 
-function TicketList(){
-  return (
-    <div>
-      <hr/>
-      {masterTicketList.map((ticket, index) =>
-        <Ticket names={ticket.names}
-          location={ticket.location}
-          issue={ticket.issue}
-          key={index}/>
-      )}
-    </div>
+function TicketList(props) {
+  var TicketListComponentStyles = {
+  backgroundColor: '#ecf0f1',
+  fontFamily: 'sans-serif',
+  paddingTop: '50px'
+}
+return (
+  <div style={TicketListComponentStyles}>
+    <hr/>
+    {masterTicketList.map((ticket, index) =>
+      <Ticket names={ticket.names}
+        location={ticket.location}
+        issue={ticket.issue}
+        key={index}/>
+    )}
+  </div>
   );
 }
 
