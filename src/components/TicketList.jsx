@@ -1,5 +1,6 @@
 import React from 'react';
 import Ticket from './Ticket';
+import helpImage from '../assets/images/help.jpg';
 
 var masterTicketList = [
   {
@@ -24,7 +25,7 @@ function TicketList(props) {
   backgroundColor: '#ecf0f1',
   fontFamily: 'sans-serif',
   paddingTop: '50px'
-}
+};
 return (
   <div style={TicketListComponentStyles}>
     <hr/>
@@ -34,6 +35,7 @@ return (
         issue={ticket.issue}
         key={index}/>
     )}
+    <img src={helpImage}/>
   </div>
   );
 }

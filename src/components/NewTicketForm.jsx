@@ -15,7 +15,7 @@ function NewTicketForm(){
         <textarea
           id='issue'
           placeholder='Describe your issue.'/>
-      <button type='submit'>Help!</button>
+        <button type='submit'>Help!</button>
       </form>
     </div>
   );
