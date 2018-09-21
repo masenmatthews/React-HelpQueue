@@ -24,8 +24,16 @@ function TicketList(props) {
   var TicketListComponentStyles = {
   backgroundColor: '#ecf0f1',
   fontFamily: 'sans-serif',
-  paddingTop: '50px'
-};
+  paddingTop: '50px',
+  };
+
+  var HelpImageStyles = {
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '50%'
+  };
+
 return (
   <div style={TicketListComponentStyles}>
     <hr/>
@@ -35,7 +43,9 @@ return (
         issue={ticket.issue}
         key={index}/>
     )}
-    <img src={helpImage}/>
+    <div style={HelpImageStyles}>
+      <img src={helpImage}/>
+    </div>
   </div>
   );
 }
