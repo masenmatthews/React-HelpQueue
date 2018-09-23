@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewTicketForm(props) {
     let _names = null;
@@ -8,11 +9,11 @@ function NewTicketForm(props) {
 
     function handleNewTicketFormSubmission(event) {
       event.preventDefault();
-      props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value});
+      props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value, id: v4()});
       _names.value = '';
       _location.value = '';
       _issue.value = '';
-  }
+    }
 
   // The above function is just preventing the request from being fired automatically once you load the page. It's also console logging and setting values back to blank once the form is submitted.
 
