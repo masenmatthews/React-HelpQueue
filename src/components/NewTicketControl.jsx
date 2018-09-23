@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import NewTicketForm from './NewTicketForm';
+import PropTypes from 'prop-types';
 
 class NewTicketControl extends React.Component {
 
@@ -19,7 +20,7 @@ class NewTicketControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewTicketForm />;
+          currentlyVisibleContent = <NewTicketForm onNewTicketCreation={this.props.onNewTicketCreation}/>;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
     }
@@ -30,6 +31,10 @@ class NewTicketControl extends React.Component {
     );
   }
 }
+
+NewTicketControl.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 // Everything in the render function is related to what's being displayed. currentlyVisibleContent gets filled with the new ticket form or the confirmation questions.
 

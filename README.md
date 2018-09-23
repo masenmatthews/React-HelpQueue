@@ -56,3 +56,11 @@ Adding refs, lifting state, and implementing UUID
 4. Next we'll add code to dynamically render our new stateful list of user-created tickets.
 
 5. Finally, we'll implement a quick-and-easy library called UUID that will assign unique IDs to each ticket.
+
+Steps to turning a functional component into a class-based component in five steps:
+
+1. Create an ES6 class with the same name that extends React.Component.
+2. Add a single empty method to it called render().
+3. Move the body of the function into the render() method.
+4. Replace any calls to props with this.props in the render() body. (And, calls to any event handlers should change from eventHandlerName to this.eventHandlerName).
+5. Delete the remaining empty function declaration.
