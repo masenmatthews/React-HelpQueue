@@ -44,3 +44,15 @@ Implementing data flow with callbacks:
 3. The child component can access this method through its props, and call it at the relevant time (like when the Yes button is clicked, in our case).
 
 4. When the child executes the callback method from its props, the method in the parent component is invoked. Because the method resides in the parent class it has access to update the parent's state.
+
+Adding refs, lifting state, and implementing UUID
+
+1. First we'll add something called refs to our form. They will allow us to collect information users place in form fields.
+
+2. Once we're able to gather user-provided data, we'll need to decide where to keep it. We'll learn how to use a concept/best practice called lifting state to structure our React applications and their state in the most efficient manner.
+
+3. Once we've determined where to keep our new state we'll add code that will move user-provided data to this location, similar to the manner we "moved" information between the ConfirmationQuestions and NewTicketControl.
+
+4. Next we'll add code to dynamically render our new stateful list of user-created tickets.
+
+5. Finally, we'll implement a quick-and-easy library called UUID that will assign unique IDs to each ticket.
